@@ -13,28 +13,22 @@
 </head>
 <body ng-controller="ProductListController">
   <h1 class="title">Klaudia Kusik Art</h1>
-  <h2>
+
   <ul class="menu">
-    <li><a>Newsy</a></li>
+    <li><a ui-sref=".products">Newsy</a></li>
     <li><a>Moje Prace</a></li>
     <li><a>O mnie</a></li>
     <li><a>Kontakt</a></li>
   </ul>
-  </h2>
+
 
     <div id="cover">
       <div class="cover-content">
         <h3>Sztuka dla Ciebie</h3>
       </div>
     </div>
+  <div ui-view></div>
 
-    <div class="products">
-      <div ng-repeat="painting in paintings.results" class="product">
-        <h5>{{painting.title}}</h5>
-        <img src="{{painting.image_source}}">
-        <h6>{{painting.price}}</h6>
-        <a href="#" class="btn">Kup</a>
-      </div>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

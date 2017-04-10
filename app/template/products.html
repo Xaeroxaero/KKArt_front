@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="products">
+    <div ng-repeat="painting in paintings.results" class="product">
+        <h5>{{painting.title}}</h5>
+        <img src="{{painting.image_source}}">
+        <h6>{{painting.price}}</h6>
+        <a href="#" class="btn">Kup</a>
+    </div>
+</div>
+</body>
+</html>

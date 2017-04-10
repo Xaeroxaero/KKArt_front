@@ -1,10 +1,24 @@
 'use strict';
 var productApp = angular.module('productApp',[
-    'ngRoute'
+    'ui.router'
 ]);
 
-productApp.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+productApp.config(function($stateProvider, $urlRouterProvider) {
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+
+    // HOME STATES AND NESTED VIEWS ========================================
+        .state('home', {
+            url: '/',
+            templateUrl: 'index.html'
+        })
+
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('home.products', {
+            url: '/products',
+            templateUrl: '/template/products.html'
+        });
+
+});
