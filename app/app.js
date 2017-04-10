@@ -1,6 +1,5 @@
 'use strict';
-var productApp = angular.module('productApp',[
-    'ui.router'
+var productApp = angular.module('productApp',['ui.router'
 ]);
 
 productApp.config(function($stateProvider, $urlRouterProvider) {
@@ -10,15 +9,18 @@ productApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
     // HOME STATES AND NESTED VIEWS ========================================
-        .state('home', {
+        .state('news', {
             url: '/',
-            templateUrl: 'index.html'
+            templateUrl: '/template/news.html'
         })
 
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('home.products', {
+        .state('products', {
             url: '/products',
             templateUrl: '/template/products.html'
+        })
+        .state('contact', {
+            url: '/',
+            templateUrl: '/template/contact.html'
         });
 
 });
