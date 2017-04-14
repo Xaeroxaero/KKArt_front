@@ -1,6 +1,6 @@
 'use strict';
-var productApp = angular.module('productApp',['ui.router'
-]);
+
+var productApp = angular.module('productApp',['ui.router' ]);
 
 productApp.config(function($stateProvider, $urlRouterProvider) {
 
