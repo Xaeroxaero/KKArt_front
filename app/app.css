@@ -2,133 +2,352 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+
+
 body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
+    margin: 0;
+    padding: 0;
+
+}
+#menu {
+    color: white;
 }
 
+#cover, #cover2, #cover3 {
+    background: url("/Images/euphory.JPG") no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 0vw 0vh;
+    height: 60vh;
+
+}
+
+#cover2 {
+    background: url("/Images/Sumatran-Tiger-Hero.jpg") no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 0vw 0vh;
+    height: 60vh;
+
+}
+
+#cover3 {
+    background: url("/Images/1.jpg") no-repeat center bottom fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 0vw 0vh;
+    height: 60vh;
+
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
+
 .navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
+
 .navbar-wrapper .navbar .container {
-  width: auto;
+    width: auto;
 }
 
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  height: 500px;
-  margin-bottom: 60px;
+p {
+    color: black;
 }
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
 
 /* Featurettes
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+
 }
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
 }
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-right: 0;
-    padding-left: 0;
-  }
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
 
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
 }
 
 @media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
+    .featurette-heading {
+        margin-top: 120px;
+    }
+}
+
+hr {
+    background-color: white;
+    z-index: 19;
+}
+
+.img2 {
+    height: 100%;
+    width: 1000px;
+    min-width: 900px;
+    display: inline-block;
+
+}
+
+.imej {
+    max-height: 25vh;
+    max-width: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 33vw;
+}
+
+.scale {
+    padding: 10px;
+}
+
+.row {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    flex-basis: 10px;
+
+}
+
+.about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+}
+
+.news {
+    position: relative;
+}
+
+
+h3 {
+    font-family: monospace;
+    font-size: medium;
+    color: black;
+}
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+    color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+    color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+    color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+    color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+    color:white;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+    color: whitesmoke;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+    color:white;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+    color: whitesmoke;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+    color:white;
+    font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+    color: whitesmoke;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+    color:white;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+    color: whitesmoke;
+}
+
+header {
+    position: relative;
+    margin: 100px 0 25px 0;
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+#form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+}
+
+input {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+
+    background: transparent;
+    outline: none;
+    color: red;
+
+    border: solid 1px black;
+    border-bottom: none;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+    background: black;
+    color:white;
+}
+
+textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+
+    background: transparent;
+    outline: none;
+
+    color: red;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+
+    border: solid 1px black;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+    background: black;
+    color:white;
+}
+
+#submit {
+
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    color: black;
+
+    outline: none;
+    cursor: pointer;
+
+    border: solid 1px black;
+    border-top: none;
+}
+
+#submit:hover {
+    color:white;
 }
