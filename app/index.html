@@ -69,35 +69,46 @@
 <div id="cover">
 
 </div>
-
+<h1 class="text-muted">Moje Prace</h1>
 <div class="marketing">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-        <span ng-repeat="painting in paintings.results" class="col">
-           <div class="scale"><div class="imej"><img class="img2"  ng-if="painting.images_source.length" ng-src="{{painting.image_source}}"></div></div>
+        <div ng-repeat="painting in paintings.results" class="col" ng-if="paintings.results.length">
+            <div class="scale">
+                <div class="imej">
+                    <img class="" ng-src="{{painting.image_source}}">
+                    <h2>{{painting.title}}</h2>
+                    <p>{{painting.price}}</p>
+                </div>
+            </div>
+        </div>
+
+
             <!--<h2>{{painting.title}}</h2>-->
             <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies-->
             <!--vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo-->
             <!--cursus magna.</p>-->
             <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
-            </span>
+            </div>
     </div>
 </div><!-- /.row -->
+</div>
 <div id="cover2">
 
 </div>
 <div class="about">
-    <div>
+    <span>
         <h1 class="text-muted">O mnie</h1>
-        <h3 class="lead">bla bla bla</h3>
-    </div>
+        <h3 class="lead">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies-->
+            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. </h3>
+    </span>
 
 </div>
 <div id="cover3">
 
 </div>
-<header>Kontakt</header>
+<h1 class="text-muted">Kontakt</h1>
 
 <form ng-submit="sendPost()" id="form" class="topBefore">
 

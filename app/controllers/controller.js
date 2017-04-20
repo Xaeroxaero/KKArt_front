@@ -13,8 +13,11 @@ function($scope, $http, $products, $blog) {
         .success(
             function (data) {
                 $scope.paintings = data;
-            }
-        );
+            })
+            .catch(
+            function(err){
+                console.log(err);
+            });
     $blog.getBlog()
         .success(
             function (data) {
@@ -25,7 +28,11 @@ function($scope, $http, $products, $blog) {
                 buildingFirstBlog(1);
                 buildingFirstBlog(2);
             }
-        );
+        )
+        .catch(
+            function(err){
+                console.log(err);
+            });
     $scope.newName = "";
     $scope.sendPost = function() {
         var data = {
