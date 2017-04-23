@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>Klaudia Kusik Art</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,104 +20,87 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for tbloglate -->
     <link href="app.css" rel="stylesheet">
 </head>
 <!-- NAVBAR
 ================================================== -->
-<body ng-app="productApp" ng-controller="ProductListController">
-<div class="navbar-wrapper" id="menu">
-    <div class="container">
-
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Klaudia Kusik Art</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Newsy</a></li>
-                        <li><a href="#about">O mnie</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    </div>
+<body id="page-top" ng-app="productApp" ng-controller="ProductListController">
+<div class="menu">
+    <ul>
+        <li>
+            <a class="page-scroll active hidden" href="#page-top">Start</a>
+        </li>
+        <li>
+            <a class="page-scroll" href="#projects">Projekty</a>
+        </li>
+        <li>
+            <a class="page-scroll" href="#about">O mnie</a>
+        </li>
+        <li>
+            <a class="page-scroll" href="#contact">Kontakt</a>
+        </li>
+        <li>
+            <a class="page-scroll" href="">Blog</a>
+        </li>
+    </ul>
 </div>
+
 <div id="cover">
 
 </div>
-<h1 class="text-muted">Moje Prace</h1>
-<div class="marketing">
+<section id="projects">
+    <h1 class="text-muted">Projekty</h1>
+    <div class="marketing">
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-        <div ng-repeat="painting in paintings.results" class="col" ng-if="paintings.results.length">
-            <div class="scale">
-                <div class="imej">
-                    <img class="" ng-src="{{painting.image_source}}">
-                    <h2>{{painting.title}}</h2>
-                    <p>{{painting.price}}</p>
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div ng-repeat="painting in paintings.results" class="col" ng-if="paintings.results.length">
+                <div class="scale">
+                    <div class="imej">
+                        <img class="" ng-src="{{painting.image_source}}">
+                    </div>
+                    <div class="text-holder">
+                        <h2>{{painting.title}}</h2>
+                        <p>{{painting.price}}</p>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-
-
-            <!--<h2>{{painting.title}}</h2>-->
-            <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies-->
-            <!--vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo-->
-            <!--cursus magna.</p>-->
-            <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
-            </div>
     </div>
-</div><!-- /.row -->
-</div>
+</section>
 <div id="cover2">
 
 </div>
-<div class="about">
+<section id="about">
+    <div class="about">
     <span>
         <h1 class="text-muted">O mnie</h1>
         <h3 class="lead">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies-->
             vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. </h3>
     </span>
 
-</div>
+    </div>
+</section>
 <div id="cover3">
 
 </div>
-<h1 class="text-muted">Kontakt</h1>
+<div>
+    <section id="contact">
+        <h1 class="text-muted">Kontakt</h1>
+        <div>
+            <form ng-submit="sendPost()" id="form" class="topBefore">
 
-<form ng-submit="sendPost()" id="form" class="topBefore">
-
-    <input ng-model="newSubject" id="name" type="text" placeholder="IMIĘ" >
-    <input ng-model="newMail" id="email" type="text" placeholder="E-MAIL">
-    <textarea ng-model="newBody" id="message" type="text" placeholder="WIADOMOŚĆ"></textarea>
-    <input id="submit" type="submit" value="WYŚLIJ">
-
-</form>
+                <input ng-model="newSubject" id="name" type="text" placeholder="IMIĘ">
+                <input ng-model="newMail" id="email" type="text" placeholder="E-MAIL">
+                <textarea ng-model="newBody" id="message" type="text" placeholder="WIADOMOŚĆ"></textarea>
+                <input id="submit" type="submit" value="WYŚLIJ">
+            </form>
+        </div>
+    </section>
+</div>
 <!--<div class="news" ng-repeat="new in blogFirst">-->
 
 
@@ -143,29 +126,21 @@
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="app.js"></script>
-<script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
 <script src="controllers/controller.js"></script>
 <script src="service/products.js"></script>
 <script src="service/blog.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Bad+Script|Bubbler+One|Calligraffitti|Cinzel+Decorative|Fauna+One|Federo|Handlee|Imprima|Italiana|Kite+One|Nova+Slim|Poiret+One|Raleway+Dots|Snippet|Syncopate|Text+Me+One"
+      rel="stylesheet">
 </body>
 </html>
-<!--<ul class="menu">-->
-<!--<li><a ui-sref="news">Newsy</a></li>-->
-<!--<li><a ui-sref="products">Moje Prace</a></li>-->
-<!--<li><a>O mnie</a></li>-->
-<!--<li><a ui-sref="contact">Kontakt</a></li>-->
-<!--</ul>-->
-<!--</div>-->
 
-<!--<div id="cover">-->
-<!--<h3>Sztuka dla Ciebie</h3>-->
-<!--</div>-->
-
-<!--<div ui-view></div>-->
 
 
 
