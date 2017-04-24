@@ -9,18 +9,26 @@ productApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
     // HOME STATES AND NESTED VIEWS ========================================
-        .state('news', {
-            url: '/',
-            templateUrl: '/template/news.html'
+        .state('blog', {
+            url: '/blog',
+            templateUrl: '/blog/blog.html'
         })
 
-        .state('products', {
-            url: '/products',
-            templateUrl: '/template/products.html'
+        .state('image_viewer', {
+            ulr:'/image',
+            templateUrl: 'img_viewer/img_viewer.html'
         })
-        .state('contact', {
-            url: '/',
-            templateUrl: '/template/contact.html'
-        });
-
+        .state("home", {
+            views: {
+                'product': {
+                    templateUrl: 'template/product.html'
+                },
+                'about': {
+                    templateUrl: 'template/about.html'
+                },
+                'contact': {
+                    templateUrl: 'template/contact.html'
+                }
+            }
+        })
 });
