@@ -2,33 +2,24 @@
 
 var productApp = angular.module('productApp',['ui.router' ]);
 
-productApp.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+productApp.config(function($stateProvider, $locationProvider) {
 
     $stateProvider
-
     // HOME STATES AND NESTED VIEWS ========================================
-        .state('blog', {
-            url: '/blog',
-            templateUrl: '/blog/blog.html'
+        .state('home', {
+            name: 'home',
+            url: '/',
+            templateUrl: '/template/home.html'
         })
+        .state('blog',{
+                name: 'blog',
+                url: '/blog',
+                templateUrl: '/blog/blog.html'
+            });
 
-        .state('image_viewer', {
-            ulr:'/image',
-            templateUrl: 'img_viewer/img_viewer.html'
-        })
-        .state("home", {
-            views: {
-                'product': {
-                    templateUrl: 'template/product.html'
-                },
-                'about': {
-                    templateUrl: 'template/about.html'
-                },
-                'contact': {
-                    templateUrl: 'template/contact.html'
-                }
-            }
-        })
+
+    $locationProvider.html5Mode(true);
+
+
 });

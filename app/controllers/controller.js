@@ -1,7 +1,13 @@
 'use strict';
 var productApp = angular.module('productApp');
-productApp.controller('ProductListController',['$scope', '$http', '$products' ,'$blog',
-function($scope, $http, $products, $blog) {
+productApp.controller('ProductListController',['$scope', '$http', '$products' ,'$blog', '$document',
+function($scope, $http, $products, $blog, $document) {
+
+    $scope.scroll = function() {
+        var someElement = angular.element(document.getElementById('some-id'));
+        console.log($document);
+        $document.scrollToElement(someElement, 0, 0);
+    };
 
     function buildingFirstBlog(index) {
         if($scope.blog.results[index]){
