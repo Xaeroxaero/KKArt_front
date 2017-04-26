@@ -4,9 +4,10 @@ productApp.controller('ProductListController',['$scope', '$http', '$products' ,'
 function($scope, $http, $products, $blog, $document) {
 
     $scope.scroll = function() {
+
         var someElement = angular.element(document.getElementById('some-id'));
         console.log($document);
-        $document.scrollToElement(someElement, 0, 0);
+        $document.duScrollToElementAnimated(someElement, 1000, 1000, 2500);
     };
 
     function buildingFirstBlog(index) {

@@ -1,7 +1,9 @@
 'use strict';
 
-var productApp = angular.module('productApp',['ui.router' ]);
-
+var productApp = angular.module('productApp',['ui.router', 'duScroll' ])
+    .value('duScrollOffset', 30)
+    .value('duScrollDuration', 2000)
+    .value('duScrollBottomSpy', true);
 
 productApp.config(function($stateProvider, $locationProvider) {
 

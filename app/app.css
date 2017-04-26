@@ -434,6 +434,12 @@ ul {
 li {
     float: left;
 }
+li.active, li.active a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
 
 li a {
     display: block;
@@ -446,14 +452,14 @@ li a {
     font-size: 18px;
     font-family: 'Nova Slim', cursive;
 }
-li a:hover {
-    background-color: black;
-    color: white;
-    display: block;
+
+
+li a:hover, li a:focus {
     text-decoration: none;
+    color: white;
+    background-color: black;
     transition: all 1s;
 }
-
 .menu {
     display: flex;
     position: fixed;
@@ -472,16 +478,8 @@ li a:hover {
     padding-bottom: 20px;
 }
 
-.active {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
 
-li a:focus{
-    text-decoration: none;
-    color: white;
-}
+
 
 h3 {
     font-family: 'Kite One', sans-serif;
@@ -497,4 +495,16 @@ h3 {
 
 .menu img {
     display: block;
+}
+
+div.back {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    bottom: 0;
+    right: 0;
+    background-color: #00b3ee;
+    width: 100px;
+    height: 100px;
+    z-index: 99999;
 }
