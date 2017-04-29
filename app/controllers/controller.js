@@ -1,7 +1,14 @@
 'use strict';
 var productApp = angular.module('productApp');
-productApp.controller('ProductListController',['$scope', '$http', '$products' ,'$blog', '$document',
-function($scope, $http, $products, $blog, $document) {
+productApp.controller('ProductListController',['$scope', '$http', '$products' ,'$blog', '$document','$state',
+function($scope, $http, $products, $blog, $document, $state) {
+
+
+    function buildingFirstBlog(index) {
+        if($scope.blog.results[index]){
+            $scope.blogFirst.push($scope.blog.results[index]);
+        }
+    }
 
     $scope.scroll = function() {
 
@@ -10,37 +17,6 @@ function($scope, $http, $products, $blog, $document) {
         $document.duScrollToElementAnimated(someElement, 1000, 1000, 2500);
     };
 
-    function buildingFirstBlog(index) {
-        if($scope.blog.results[index]){
-            $scope.blogFirst.push($scope.blog.results[index]);
-        }
-    }
-
-    $products.getProducts()
-        .success(
-            function (data) {
-                $scope.paintings = data;
-            })
-            .catch(
-            function(err){
-                console.log(err);
-            });
-    $blog.getBlog()
-        .success(
-            function (data) {
-                $scope.blog = data;
-                $scope.blog.results.reverse();
-                $scope.blogFirst = [];
-                buildingFirstBlog(0);
-                buildingFirstBlog(1);
-                buildingFirstBlog(2);
-            }
-        )
-        .catch(
-            function(err){
-                console.log(err);
-            });
-    $scope.newName = "";
     $scope.sendPost = function() {
         var data = {
             email: $scope.newMail,
@@ -52,5 +28,38 @@ function($scope, $http, $products, $blog, $document) {
         });
     };
 
+    $scope.init = function () {
+
+        console.log($state.$current);
+
+        $products.getProducts()
+            .success(
+                function (data) {
+                    $scope.paintings = data;
+                })
+            .catch(
+                function(err){
+                    console.log(err);
+                });
+        $blog.getBlog()
+            .success(
+                function (data) {
+                    $scope.blog = data;
+                    $scope.blog.results.reverse();
+                    $scope.blogFirst = [];
+                    buildingFirstBlog(0);
+                    buildingFirstBlog(1);
+                    buildingFirstBlog(2);
+                }
+            )
+            .catch(
+                function(err){
+                    console.log(err);
+                });
+        $scope.newName = "";
+
+    };
+
+    $scope.init();
 }]
 );
