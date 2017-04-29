@@ -1,0 +1,90 @@
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    margin: 50px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 25px 30px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    transition: all 1s;
+    border-radius: 5%;
+    font-size: 18px;
+    font-family: 'Nova Slim', cursive;
+}
+li a:hover {
+    background-color: black;
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.menu {
+    top:0;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    opacity: 0.95;
+    text-decoration: none;
+}
+
+#projects h1 {
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+li a:focus{
+    text-decoration: none;
+    color: white;
+}
+
+h3 {
+    font-family: 'Kite One', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#contact div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:-webkit-any-link {
+    color: black;
+    text-decoration: none;
+}
+#blog_image {
+
+}
