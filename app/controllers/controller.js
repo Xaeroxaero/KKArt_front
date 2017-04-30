@@ -1,6 +1,7 @@
 'use strict';
 var productApp = angular.module('productApp');
-productApp.controller('ProductListController',['$scope', '$http', '$products' ,'$blog', '$document','$state',
+productApp.controller('ProductListController',
+['$scope', '$http', '$products' ,'$blog', '$document','$state',
 function($scope, $http, $products, $blog, $document, $state) {
 
 
@@ -10,12 +11,18 @@ function($scope, $http, $products, $blog, $document, $state) {
         }
     }
 
-    $scope.scroll = function() {
+        $scope.double = function (id) {
 
-        var someElement = angular.element(document.getElementById('some-id'));
-        console.log($document);
-        $document.duScrollToElementAnimated(someElement, 1000, 1000, 2500);
+        };
+
+    $scope.scroll = function(id) {
+        setTimeout(function () {
+                var someElement = angular.element(document.getElementById(id));
+                $document.scrollToElementAnimated(someElement);
+            }, 100
+        );
     };
+
 
     $scope.sendPost = function() {
         var data = {
