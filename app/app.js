@@ -21,6 +21,7 @@ productApp.config(function($stateProvider, $locationProvider) {
                 url: '/blog',
                 templateUrl: 'template/blog.html'
             })
+
         .state('img-viewer',{
             name: 'img-viewer',
             url: '/image/:id',
