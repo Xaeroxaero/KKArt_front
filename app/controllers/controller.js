@@ -11,15 +11,20 @@ function($scope, $http, $products, $blog, $document, $state) {
         }
     }
 
-        $scope.double = function (id) {
-
-        };
 
     $scope.scroll = function(id) {
-        setTimeout(function () {
+        setTimeout(function ()
+            {
                 var someElement = angular.element(document.getElementById(id));
-                $document.scrollToElementAnimated(someElement);
+                if (id==='contact'){
+                $document.duScrollToElementAnimated(someElement,500)
+                }
+                else {
+                    $document.duScrollToElementAnimated(someElement)
+                }
+
             }, 100
+
         );
     };
 
@@ -37,16 +42,10 @@ function($scope, $http, $products, $blog, $document, $state) {
 
     $scope.init = function () {
 
-        console.log($state.$current);
-
         $products.getProducts()
             .success(
                 function (data) {
                     $scope.paintings = data;
-                })
-            .catch(
-                function(err){
-                    console.log(err);
                 });
         $blog.getBlog()
             .success(

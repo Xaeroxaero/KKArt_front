@@ -34,34 +34,17 @@
         </div>
 
     </div>
-    <!-- /.row -->
-    <!--<div class="news" ng-repeat="new in blogFirst">-->
 
-
-    <!--<div class="row featurette">-->
-    <!--<div class="col-md-7" ng-class="{'col-md-push-5':$index === 0 || !!($index && !($index%2))}">-->
-    <!--<h2 class="featurette-heading"><span class="text-muted">{{new.title}}</span></h2>-->
-    <!--<p class="lead">{{new.news}}</p>-->
-    <!--</div>-->
-    <!--<div class="col-md-5" ng-class="{'col-md-pull-7':$index === 0 || !!($index && !($index%2))}">-->
-    <!--<img class="featurette-image img-responsive center-block" ng-src="{{new.image_source}}"-->
-    <!--alt="Generic placeholder image" width="500" height="500">-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!-- /.container -->
     <!-- Related Projects Row -->
     <div class="row">
 
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
             <h3 class="page-header">Related Projects</h3>
         </div>
-        <div class="gallery" ng-repeat="painting in gallery">
-        <div class="col-sm-3 col-xs-6">
+        <div ng-repeat="painting in gallery" class="col-sm-3 col-xs-6">
             <a href="#">
-                <img class="img-responsive portfolio-item" src={{painting.image_source}} alt="">
+                <img class="img-responsive portfolio-item" src={{painting.image_source}}>
             </a>
-        </div>
 
         </div>
 

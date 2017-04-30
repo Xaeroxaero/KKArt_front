@@ -10,7 +10,7 @@
             <div ng-repeat="painting in paintings.results" class="col" ng-if="paintings.results.length">
                 <div class="scale" ui-sref="img-viewer({id:painting.id})">
                     <div class="imej">
-                        <img class="" ng-src="{{painting.image_source}}">
+                        <img ng-src="{{painting.image_source}}">
                     </div>
                     <div class="text-holder">
                         <h2>{{painting.title}}</h2>
@@ -41,7 +41,7 @@
 <div id="cover3">
 
 </div>
-<div>
+
     <section id="contact">
         <h1 class="text-muted">Kontakt</h1>
         <div>
@@ -56,4 +56,4 @@
 
 
     </section>
-</div>
+
