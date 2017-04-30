@@ -6,7 +6,8 @@ productApp.controller('imageViewerController',['$scope', '$http', '$products', '
         function setSinglePainting(id) {
             $scope.paintings.forEach(function (paint) {
                 if (id == paint.id){
-                    $scope.paint = paint
+                    $scope.paint = paint;
+                    console.log(paint)
                 }
             })
         }
@@ -19,13 +20,14 @@ productApp.controller('imageViewerController',['$scope', '$http', '$products', '
                 .success(
                     function (data) {
                         $scope.paintings = data.results;
-                        console.log(data.results);
                         setSinglePainting($stateParams.id);
                         $scope.gallery = [];
-                        setLocalGallery($stateParams.id -2);
-                        setLocalGallery($stateParams.id -1);
-                        setLocalGallery($stateParams.id +1);
-                        setLocalGallery($stateParams.id +2);
+                        console.log(parseInt($stateParams.id) +1);
+                        var number = (parseInt($stateParams.id));
+                        setLocalGallery(number -2);
+                        setLocalGallery(number -1);
+                        setLocalGallery(number +1);
+                        setLocalGallery(number +2);
                     });
 
         }
@@ -35,8 +37,8 @@ productApp.controller('imageViewerController',['$scope', '$http', '$products', '
                 console.log($scope.gallery)
             }
 
-        }
 
+    }
         /**
          * controller init
          */
