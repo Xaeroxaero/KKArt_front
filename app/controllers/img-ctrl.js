@@ -21,8 +21,19 @@ productApp.controller('imageViewerController',['$scope', '$http', '$products', '
                         $scope.paintings = data.results;
                         console.log(data.results);
                         setSinglePainting($stateParams.id);
-                        console.log($scope.paint)
+                        $scope.gallery = [];
+                        setLocalGallery($stateParams.id -2);
+                        setLocalGallery($stateParams.id -1);
+                        setLocalGallery($stateParams.id +1);
+                        setLocalGallery($stateParams.id +2);
                     });
+
+        }
+        function setLocalGallery(id) {
+            if($scope.paintings[id]){
+                $scope.gallery.push($scope.paintings[id]);
+                console.log($scope.gallery)
+            }
 
         }
 
