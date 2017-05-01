@@ -1,8 +1,8 @@
 'use strict';
 var productApp = angular.module('productApp');
 productApp.controller('ProductListController',
-['$scope', '$http', '$products' ,'$blog', '$document','$state',
-function($scope, $http, $products, $blog, $document, $state) {
+['$scope', '$http', '$products' ,'$blog', '$document',
+function($scope, $http, $products, $blog, $document) {
 
 
     function buildingFirstBlog(index) {
@@ -10,7 +10,13 @@ function($scope, $http, $products, $blog, $document, $state) {
             $scope.blogFirst.push($scope.blog.results[index]);
         }
     }
-
+    $document.on('scroll', function() {
+        console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
+    });
+    var container = angular.element(document.getElementById('container'));
+    container.on('scroll', function() {
+        console.log('Container scrolled to ', container.scrollLeft(), container.scrollTop());
+    });
 
     $scope.scroll = function(id) {
         setTimeout(function ()
