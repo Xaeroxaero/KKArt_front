@@ -1,129 +1,27 @@
+<header class="header-image">
+    <div class="headline">
+        <div class="container">
+            <h1>One Page Wonder</h1>
+            <h2>Will Knock Your Socks Off</h2>
+        </div>
+    </div>
+</header>
+<section id="news">
+    <!-- Page Content -->
+    <div class="container">
+        <div class="news" ng-repeat="new in blog.results">
+            <hr class="featurette-divider">
 
-            <!-- Page Content -->
-            <div class="container">
-
-                <div class="row">
-                    <section id="news">
-                    <!-- Blog Entries Column -->
-                    <div class="col-md-8">
-
-                        <h1 class="page-header">
-                            Page Heading
-                            <small>Secondary Text</small>
-                        </h1>
-
-                        <!-- First Blog Post -->
-                        <div class="news" ng-repeat="new in blogFirst">
-                        <h2>
-                            <a href="#">{{new.title}}</a>
-                        </h2>
-                        <p class="lead">
-                            by <a href="index.php">Start Bootstrap</a>
-                        </p>
-                        <p><span class="glyphicon glyphicon-time"></span>{{new.created}}</p>
-                        <hr>
-                        <img id="blog_image" class="img-responsive" ng-src="{{new.image_source}}" alt="">
-                        <hr>
-                        <p>{{new.news}}</p>
-                        <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                        <hr>
-                        </div>
-
-                        <!-- Pager -->
-                        <ul class="pager">
-                            <li class="previous">
-                                <a href="#">&larr; Older</a>
-                            </li>
-                            <li class="next">
-                                <a href="#">Newer &rarr;</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <!-- Blog Sidebar Widgets Column -->
-                    <div class="col-md-4">
-
-                        <!-- Blog Search Well -->
-                        <div class="well">
-                            <h4>Blog Search</h4>
-                            <div class="input-group">
-                                <input type="text" class="form-control">
-                                <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                            </div>
-                            <!-- /.input-group -->
-                        </div>
-
-                        <!-- Blog Categories Well -->
-                        <div class="well">
-                            <h4>Blog Categories</h4>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-lg-6 -->
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-lg-6 -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-
-                        <!-- Side Widget Well -->
-                        <div class="well">
-                            <h4>Side Widget Well</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                        </div>
-
-                    </div>
-                    </section>
-                </div>
-                <!-- /.row -->
-
-                <hr>
-
-                <!-- Footer -->
-                <footer>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <p>Copyright &copy; Your Website 2014</p>
-                        </div>
-                        <!-- /.col-lg-12 -->
-                    </div>
-                    <!-- /.row -->
-                </footer>
-
+            <!-- First Featurette -->
+            <div class="featurette">
+                <img class="featurette-image img-rounded img-responsive" ng-src="{{new.image_source}}"
+                     ng-class="{'pull-right':$index % 2 === 0, 'pull-left':$index % 2 !== 0}" width="500">
+                <h2 class="featurette-heading">{{new.title}}
+                </h2>
+                <span class="text-muted">{{new.created}}</span>
+                <p class="lead">{{new.news}}</p>
             </div>
-
-
-
-            <!-- Bootstrap core JavaScript -->
-
-
-
-
-
+        </div>
+    </div>
+</section>
+    
