@@ -75,7 +75,7 @@ hr {
 }
 .imej {
     position: relative;
-    max-height: 25vh;
+    max-height: 33vh;
     max-width: 500px;
     overflow: hidden;
     display: flex;
@@ -84,7 +84,7 @@ hr {
 }
 
 .imej img{
-    width:100%;
+    width:50%;
     min-height: 330px;
 }
 
@@ -613,4 +613,15 @@ footer {
         margin-left: 0;
     }
 }
+.bar {
+    max-height: 25vh;
+    overflow: hidden;
+}
+.bar a img{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
+}

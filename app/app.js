@@ -1,6 +1,6 @@
 'use strict';
 
-var productApp = angular.module('productApp',['ui.router', 'duScroll' ])
+var productApp = angular.module('productApp',['ui.router', 'duScroll', 'angularUtils.directives.dirPagination'])
         .value('duScrollBottomSpy', true)
         .value('duScrollOffset', 80)
         .value('duScrollDuration', 2000);

@@ -9,8 +9,9 @@
 <section id="news">
     <!-- Page Content -->
     <div class="container">
-        <div class="news" ng-repeat="new in blog.results">
-            <hr class="featurette-divider">
+        <hr class="featurette-divider">
+        <div class="news" dir-paginate="new in blog.results | itemsPerPage: 3">
+
 
             <!-- First Featurette -->
             <div class="featurette">
@@ -21,7 +22,9 @@
                 <span class="text-muted">{{new.created}}</span>
                 <p class="lead">{{new.news}}</p>
             </div>
+            <hr class="featurette-divider">
         </div>
     </div>
+    <dir-pagination-controls></dir-pagination-controls>
 </section>
     

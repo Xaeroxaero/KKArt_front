@@ -23,7 +23,7 @@ function($scope, $http, $products, $blog, $document) {
             {
                 var someElement = angular.element(document.getElementById(id));
                 if (id==='contact'){
-                $document.duScrollToElementAnimated(someElement, -175)
+                $document.duScrollToElementAnimated(someElement, -174)
                 }
                 else {
                     $document.duScrollToElementAnimated(someElement)
