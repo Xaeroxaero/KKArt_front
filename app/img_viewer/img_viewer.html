@@ -8,7 +8,7 @@
     <!-- Portfolio Item Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Portfolio Item
+            <h1 class="page-header">{{paint.title}}
                 <small>Item Subheading</small>
             </h1>
         </div>
@@ -19,18 +19,16 @@
     <div class="row">
 
         <div class="col-md-8">
-            <img class="img-responsive" src={{paint.image_source}} alt="">
+            <img class="img-responsive" src={{paint.image_source.full_size}}>
         </div>
 
         <div class="col-md-4">
             <h3>Opis</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-                urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies,
-                justo eu convallis placerat, felis enim.</p>
+            <p>{{paint.about}}</p>
             <h3>Szczegóły</h3>
-            <ul>
-                <li>Lorem Ipsum</li>
-                <li>Dolor Sit Amet</li>
+            <ul class="detail">
+                <li>Metoda: {{paint.metod}}</li>
+                <li>Wymiary: {{paint.paiting_size}}</li>
                 <li>Consectetur</li>
                 <li>Adipiscing Elit</li>
             </ul>
@@ -42,11 +40,11 @@
     <div class="row">
 
         <div class="col-lg-12 col-sm-12 col-xs-12">
-            <h3 class="page-header">Related Projects</h3>
+            <h3 class="page-header">Powiązane projekty</h3>
         </div>
         <div ng-repeat="painting in gallery" class="bar col-sm-3 col-xs-6">
             <a ui-sref="img-viewer({id:painting.id})">
-                <img class="img-responsive portfolio-item" src={{painting.image_source}}>
+                <img class="img-responsive portfolio-item" src={{painting.image_source.thumbnail}}>
             </a>
 
         </div>

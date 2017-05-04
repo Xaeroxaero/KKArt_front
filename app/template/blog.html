@@ -19,12 +19,14 @@
                      ng-class="{'pull-right':$index % 2 === 0, 'pull-left':$index % 2 !== 0}" width="500">
                 <h2 class="featurette-heading">{{new.title}}
                 </h2>
-                <span class="text-muted">{{new.created}}</span>
+                <span class="text-muted">{{new.created | date : 'yyyy-MM-dd HH:mm'}}</span>
                 <p class="lead">{{new.news}}</p>
             </div>
             <hr class="featurette-divider">
         </div>
     </div>
+    <div class="pagination">
     <dir-pagination-controls></dir-pagination-controls>
+    </div>
 </section>
     

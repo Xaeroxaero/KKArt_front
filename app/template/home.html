@@ -10,7 +10,7 @@
             <div ng-repeat="painting in paintings.results" class="col" ng-if="paintings.results.length">
                 <div class="scale" ui-sref="img-viewer({id:painting.id})">
                     <div class="imej">
-                        <img ng-src="{{painting.image_source}}">
+                        <img ng-src="{{painting.image_source.thumbnail}}">
                     </div>
                     <div class="text-holder">
                         <h2>{{painting.title}}</h2>

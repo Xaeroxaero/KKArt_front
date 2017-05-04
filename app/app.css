@@ -625,3 +625,12 @@ footer {
     position: relative;
 
 }
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.detail li {
+    width: 100%;
+    float: left;
+}
