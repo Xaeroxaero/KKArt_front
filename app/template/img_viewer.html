@@ -1,0 +1,54 @@
+
+
+
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{paint.title}}
+                <small>Item Subheading</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-8">
+            <img class="img-responsive" src={{paint.image_source.full_size}}>
+        </div>
+
+        <div class="col-md-4">
+            <h3>Opis</h3>
+            <p>{{paint.about}}</p>
+            <h3>Szczegóły</h3>
+            <ul class="detail">
+                <li>Metoda: {{paint.metod}}</li>
+                <li>Wymiary: {{paint.paiting_size}}</li>
+                <li>Consectetur</li>
+                <li>Adipiscing Elit</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Related Projects Row -->
+    <div class="row">
+
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <h3 class="page-header">Powiązane projekty</h3>
+        </div>
+        <div ng-repeat="painting in gallery" class="bar col-sm-3 col-xs-6">
+            <a ui-sref="img-viewer({id:painting.id})">
+                <img class="img-responsive portfolio-item" src={{painting.image_source.thumbnail}}>
+            </a>
+
+        </div>
+
+</div>
+
+</div>

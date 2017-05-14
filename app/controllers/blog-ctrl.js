@@ -4,8 +4,8 @@
 'use strict';
 var productApp = angular.module('productApp');
 productApp.controller('BlogListController',
-    ['$scope', '$http', '$blog', '$document',
-        function ($scope, $http, $blog, $document) {
+    ['$scope', '$http', '$blog',
+        function ($scope, $http, $blog) {
 
 
             function buildingFirstBlog(index) {
@@ -14,23 +14,6 @@ productApp.controller('BlogListController',
                 }
             }
 
-            $scope.scroll = function (id) {
-                $document.on('scroll', function () {
-                });
-                var container = angular.element(document.getElementById('container'));
-                container.on('scroll', function () {
-                });
-                setTimeout(function () {
-                        var someElement = angular.element(document.getElementById(id));
-                        if (id === 'contact') {
-                            $document.duScrollToElementAnimated(someElement, -174)
-                        }
-                        else {
-                            $document.duScrollToElementAnimated(someElement)
-                        }
-                    }, 100
-                );
-            };
             $scope.init = function () {
                 $blog.getBlog()
                     .success(
