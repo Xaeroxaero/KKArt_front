@@ -75,20 +75,14 @@ hr {
 }
 .imej {
     position: relative;
-    max-height: 33vh;
+    max-height: 20vw;
     max-width: 500px;
     overflow: hidden;
     display: flex;
     align-items: center;
     width: 25vw;
+    justify-content: center;
 }
-
-.imej img{
-    width:50%;
-    min-height: 330px;
-}
-
-
 
 .scale {
     padding: 10px;
@@ -158,7 +152,7 @@ input::placeholder, textarea::placeholder {
     font-size: 0.875em;
 }
 
-input:focus::placeholder, textarea::focus:placeholder {
+input:focus::placeholder, textarea:focus::placeholder {
     color: #bbb5af;
 }
 
@@ -205,7 +199,7 @@ input:hover::placeholder, textarea:hover::placeholder {
     font-size: 0.875em;
 }
 
-input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+input:hover:focus::-ms-placeholder, textarea:hover:focus::-ms-placeholder {
     color: whitesmoke;
 }
 
@@ -303,7 +297,7 @@ textarea:hover {
 }
 
 .imej img {
-    width: 100%;
+    width: 150%;
     vertical-align: top;
 }
 
@@ -617,14 +611,7 @@ footer {
     max-height: 25vh;
     overflow: hidden;
 }
-.bar a img{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 
-}
 .pagination {
     display: flex;
     justify-content: center;
