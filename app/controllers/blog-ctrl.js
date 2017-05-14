@@ -1,6 +1,3 @@
-/**
- * Created by XX on 2017-05-14.
- */
 'use strict';
 var productApp = angular.module('productApp');
 productApp.controller('BlogListController',
