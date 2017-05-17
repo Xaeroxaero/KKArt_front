@@ -3,7 +3,8 @@
 var productApp = angular.module('productApp',['ui.router', 'duScroll', 'angularUtils.directives.dirPagination'])
         .value('duScrollBottomSpy', true)
         .value('duScrollOffset', 80)
-        .value('duScrollDuration',1300);
+        .value('duScrollDuration',1300)
+        .value('duScrollCancelOnEvents', false);
 
 productApp.config(function($stateProvider, $locationProvider) {
 

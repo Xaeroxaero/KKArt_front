@@ -3,7 +3,6 @@
 /* Padding below the footer and lighter body text */
 
 
-
 body {
     margin: 0;
     padding: 0;
@@ -397,27 +396,29 @@ h3 {
     font-weight: 500;
 }
 
-#contact div {
+.contact2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .menu img {
     display: block;
 }
 
-div.back {
-    display: flex;
-    position: fixed;
-    justify-content: flex-end;
-    bottom: 0;
-    right: 0;
-    background-color: #00b3ee;
-    width: 100px;
-    height: 100px;
-    z-index: 99999;
-}
+
+/*div.back {*/
+    /*display: flex;*/
+    /*position: fixed;*/
+    /*justify-content: flex-end;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*background-color: #00b3ee;*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*z-index: 99999;*/
+/*}*/
 
 .portfolio-item {
     margin-bottom: 25px;
@@ -449,7 +450,9 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
-
+.marketing.headline {
+    padding-top: 0;
+}
 .headline {
     padding: 120px 0;
 }
@@ -460,7 +463,7 @@ body {
     background: rgba(255,255,255,0.9);
 }
 
-.headline h2 {
+.headline>h2 {
     font-size: 77px;
     background: #fff;
     background: rgba(255,255,255,0.9);
@@ -491,11 +494,14 @@ footer {
 }
 
 @media(max-width:1200px) {
+    .marketing.headline {
+        padding-top: 0;
+    }
     .headline h1 {
         font-size: 140px;
     }
 
-    .headline h2 {
+    .headline>h2 {
         font-size: 63px;
     }
 
@@ -517,11 +523,14 @@ footer {
 }
 
 @media(max-width:991px) {
+    .marketing.headline {
+        padding-top: 0;
+    }
     .headline h1 {
         font-size: 105px;
     }
 
-    .headline h2 {
+    .headline>h2 {
         font-size: 50px;
     }
 
@@ -547,6 +556,9 @@ footer {
 }
 
 @media(max-width:768px) {
+    .marketing.headline {
+        padding-top: 0;
+    }
     .container {
         margin: 0 15px;
     }
@@ -561,11 +573,14 @@ footer {
 }
 
 @media(max-width:668px) {
+    .marketing.headline {
+        padding-top: 0;
+    }
     .headline h1 {
         font-size: 70px;
     }
 
-    .headline h2 {
+    .headline>h2 {
         font-size: 32px;
     }
 
@@ -575,6 +590,9 @@ footer {
 }
 
 @media(max-width:640px) {
+    .marketing.headline {
+        padding-top: 0;
+    }
     .headline {
         padding: 75px 0 25px 0;
     }
@@ -583,12 +601,15 @@ footer {
         font-size: 60px;
     }
 
-    .headline h2 {
+    .headline>h2 {
         font-size: 30px;
     }
 }
 
 @media(max-width:375px) {
+    .marketing.headline {
+        padding-top: 0;
+    }
     .featurette-divider {
         margin: 10px 0;
     }
@@ -621,3 +642,4 @@ footer {
     width: 100%;
     float: left;
 }
+

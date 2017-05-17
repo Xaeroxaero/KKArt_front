@@ -2,21 +2,21 @@
 
 </div>
 <section id="projects">
-    <h1 class="text-muted">Projekty</h1>
-    <div class="marketing">
 
+    <div class="marketing headline">
+        <h1 class="text-muted">Projekty</h1>
 
         <div class="row">
-            <div ng-repeat="painting in paintings.results" class="col" ng-if="paintings.results.length">
-                <div class="scale" ui-sref="img-viewer({id:painting.id})">
-                    <div class="imej">
-                        <img ng-src="{{painting.image_source.thumbnail}}">
+                <div ng-repeat="painting in paintings.results" class="col" ng-if="paintings.results.length">
+                    <div class="scale" ui-sref="img-viewer({id:painting.id})">
+                        <div class="imej">
+                            <img ng-src="{{painting.image_source.thumbnail}}">
+                        </div>
+                        <div class="text-holder">
+                            <h2>{{painting.title}}</h2>
+                            <p>{{painting.price}}</p>
+                        </div>
                     </div>
-                    <div class="text-holder">
-                        <h2>{{painting.title}}</h2>
-                        <p>{{painting.price}}</p>
-                    </div>
-                </div>
             </div>
 
 
@@ -30,7 +30,7 @@
 </div>
 <section id="about">
     <div class="about">
-    <span>
+    <span class="headline">
         <h1 class="text-muted">O mnie</h1>
         <h3 class="lead">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies-->
             vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. </h3>
@@ -38,13 +38,13 @@
 
     </div>
 </section>
-<section id="contact">
+
     <div id="cover3">
 
     </div>
-
-
+<div class="headline container">
     <h1 class="text-muted">Kontakt</h1>
+<div class="contact2 row">
     <div>
         <form ng-submit="sendPost()" id="form" class="topBefore">
 
@@ -54,7 +54,9 @@
             <input id="submit" type="submit" value="WYŚLIJ">
         </form>
     </div>
-
-
+</div>
+</div>
+<section id="contact">
 </section>
+
 
