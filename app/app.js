@@ -11,6 +11,7 @@ productApp.config(function($stateProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 
     $stateProvider
+
     // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             name: 'home',

@@ -21,6 +21,7 @@ productApp.controller('BlogListController',
                             buildingFirstBlog(0);
                             buildingFirstBlog(1);
                             buildingFirstBlog(2);
+                            $scope.$emit('scrolluj');
                         }
                     )
             };

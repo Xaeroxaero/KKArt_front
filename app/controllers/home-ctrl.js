@@ -23,7 +23,9 @@ productApp.controller('ProductListController',
                     .success(
                         function (data) {
                             $scope.paintings = data;
+                            $scope.$emit('scrolluj');
                         });
+
             };
             $scope.init();
         }]
