@@ -28,7 +28,6 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: 0vw -7vh;
     height: 75vh;
 
 }
@@ -39,7 +38,6 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: 0vw 0vh;
     height: 60vh;
 
 }
@@ -50,7 +48,6 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: 0vw 0vh;
     height: 60vh;
 
 }
