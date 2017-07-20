@@ -28,8 +28,8 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 75vh;
-
+    height: 45vw;
+    min-height: 300px;
 }
 
 #cover2 {
@@ -38,8 +38,8 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 60vh;
-
+    height: 50vw;
+    min-height: 300px;
 }
 
 #cover3 {
@@ -48,8 +48,8 @@ h1 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 60vh;
-
+    height: 50vw;
+    min-height: 300px;
 }
 
 @media(min-width:767px) {
@@ -78,11 +78,16 @@ hr {
     align-items: center;
     width: 25vw;
     justify-content: center;
+    min-width: 275px;
+    min-height: 250px;
 }
 
 .scale {
     padding: 10px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row {
@@ -211,14 +216,14 @@ header {
 
 #form {
     position: relative;
-    width: 320px;
+    width: 270px;
     margin: 50px 0 100px 0;
 }
 
 input {
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
-    width: 320px;
+    width: 270px;
     height: 50px;
     padding: 0px 15px 0px 15px;
 
@@ -246,8 +251,8 @@ input:hover {
 }
 
 textarea {
-    width: 320px;
-    max-width: 320px;
+    width: 270px;
+    max-width: 270px;
     height: 110px;
     max-height: 110px;
     padding: 15px;
@@ -630,6 +635,7 @@ footer {
 .bar {
     max-height: 25vh;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .pagination {
