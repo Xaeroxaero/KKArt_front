@@ -99,6 +99,8 @@ hr {
     flex-basis: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
+    margin-right: 0;
+    margin-left: 0;
 
 }
 .about {
