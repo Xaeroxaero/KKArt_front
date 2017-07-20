@@ -629,7 +629,6 @@ footer {
     }
 }
 .bar {
-    max-height: 25vh;
     overflow: hidden;
     margin-bottom: 10px;
 }
